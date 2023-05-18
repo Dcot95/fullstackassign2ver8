@@ -1,0 +1,30 @@
+<table class="table is-fullwidth">
+    <thead>
+    <tr>
+        <th>Pointofinterest</th>
+        <th>Comment</th>
+        <th>Rating</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each country.reviews}}
+        <tr>
+            <td>
+                {{title}}
+            </td>
+            <td>
+                {{comment}}
+            </td>
+            <td>
+                {{rating}}
+            </td>
+            <td>
+                <a href="/country/{{../country._id}}/deletereview/{{_id}}" class="ui icon button">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

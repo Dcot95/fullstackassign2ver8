@@ -1,0 +1,64 @@
+{
+  "name": "placemark",
+  "version": "0.1.0",
+  "description": "Version 8 of my assignment 2 for fullstack ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon  src/server.js --ignore 'src/models/json/*.json'",
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "test": "nyc --reporter=lcov --reporter=text --report-dir=./coverage/mypackage mocha --ui tdd test/**.js -exit --timeout 10000",
+    "testmodels": "nyc --reporter=lcov --reporter=text --report-dir=./coverage/mypackage mocha --ui tdd test/models/**/*.js -exit --timeout 10000",
+    "testapi": "nyc --reporter=lcov --reporter=text --report-dir=./coverage/mypackage mocha --ui tdd test/api/**/*.js -exit --timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dcot95/fullstackassign2ver8.git"
+  },
+  "keywords": [
+    "node",
+    "hapi"
+  ],
+  "author": "dcot95",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dcot95/fullstackassign2ver8/issues"
+  },
+  "homepage": "https://github.com/Dcot95/fullstackassign2ver8#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.36.4",
+    "dotenv": "^14.3.2",
+    "handlebars": "^4.7.7",
+    "hapi-auth-jwt2": "^10.4.0",
+    "hapi-swagger": "^15.0.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "lowdb": "^3.0.0",
+    "mais-mongoose-seeder": "^1.0.7",
+    "mongoose": "^6.1.8",
+    "uuid": "^8.3.2",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "axios": "^0.25.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15",
+    "nyc": "^15.1.0",
+    "prettier": "^2.5.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

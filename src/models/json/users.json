@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "firstName": "Maggie",
+      "lastName": "Simpson",
+      "email": "maggie@simpson.com",
+      "password": "secret",
+      "_id": "380e7c12-d192-4197-b633-48bede23c126"
+    }
+  ]
+}

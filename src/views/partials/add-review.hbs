@@ -1,0 +1,32 @@
+<form class="box" action="/country/{{country._id}}/addreview" method="POST" onsubmit="return validateRating()">
+    <label>Enter Review Details:</label>
+    <div class="field is-horizontal">
+        <div class="field-body">
+            <div class="field">
+                <input class="input" type="text" placeholder="Enter Title" name="title">
+            </div>
+            <div class="field">
+                <input class="input" type="text" placeholder="Enter Comment" name="comment">
+            </div>
+            <div class="field">
+                <input class="input" type="text" placeholder="Enter Rating out of 5" name="rating">
+                <p id="ratingError" style="color: red; display: none;">Please enter a valid rating (0-5).</p>
+            </div>
+        </div>
+    </div>
+    <button class="button is-primary">Add Review</button>
+</form>
+
+<script>
+    function validateRating() {
+        var ratingInput = document.getElementsByName("rating")[0].value;
+        var rating = parseInt(ratingInput);
+
+        if (isNaN(rating) || rating < 0 || rating > 5) {
+            document.getElementById("ratingError").style.display = "block";
+            return false;
+        }
+
+        return true;
+    }
+</script>

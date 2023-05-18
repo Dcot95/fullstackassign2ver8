@@ -1,0 +1,38 @@
+<table class="table is-fullwidth">
+    <thead>
+    <tr>
+        <th>Pointofinterest</th>
+        <th>County</th>
+        <th>Description</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each country.pointofinterests}}
+        <tr>
+            <td>
+                {{title}}
+            </td>
+            <td>
+                {{county}}
+            </td>
+            <td>
+                {{description}}
+            </td>
+            <td>
+                {{latitude}}
+            </td>
+            <td>
+                {{longitude}}
+            </td>
+            <td>
+                <a href="/country/{{../country._id}}/deletepointofinterest/{{_id}}" class="ui icon button">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
