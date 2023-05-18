@@ -1,4 +1,4 @@
-export const serviceUrl = "https://fullstackassign1.onrender.com";
+export const serviceUrl = "https://fullstackassign2ver8.onrender.com";
 
 export const maggie = {
     firstName: "Maggie",
