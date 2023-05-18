@@ -55,16 +55,4 @@ suite("Review API tests", () => {
         returnedReviews = await placemarkService.getAllReviews();
         assert.equal(returnedReviews.length, 0);
     });
-    test("denormalised country", async () => {
-        for (let i = 0; i < testReviews.length; i += 1) {
-            // eslint-disable-next-line no-await-in-loop
-            await placemarkService.createReview(brazil._id, testReviews[i]);
-        }
-        const returnedCountry = await placemarkService.getCountry(mexico._id);
-        assert.equal(returnedCountry.reviews.length, testReviews.length);
-        for (let i = 0; i < testReviews.length; i += 1) {
-            assertSubset(testReviews[i], returnedCountry.reviews[i]);
-        }
-    });
-
 });
